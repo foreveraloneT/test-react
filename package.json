@@ -1,0 +1,58 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel start-dev-api start-dev-ui storybook",
+    "start-dev-api": "json-server --watch api/db.json --routes api/route.json --port 8000 -d 500",
+    "start-dev-ui": "webpack-dev-server",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.5",
+    "babel-core": "^6.8.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.26.2",
+    "json-server": "^0.9.5",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.2",
+    "postcss-loader": "^1.3.2",
+    "react-hot-loader": "^3.0.0-beta.1",
+    "redux-logger": "^2.8.1",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.1.0-beta.7",
+    "webpack-dev-server": "^2.4.1",
+    "@kadira/storybook": "^2.21.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.6.1",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0",
+    "redux-api-middleware": "^1.0.2",
+    "redux-form": "^6.0.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
+  "engines": {
+    "node": "6.0.0",
+    "npm": "3.8.6"
+  }
+}
